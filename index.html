@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encyclopedia</title>
+
+    <!-- Import Styles -->
+    <link rel="stylesheet/less" type="text/css" href="./styles/style.less" />
+
+    <!-- Import Less -->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+    <!-- Import icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <!-- Import Vue router -->
+    <script src="https://unpkg.com/vue-router@4"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <nav>
+          <h1>COSMOMUSCLE</h1>
+          <ul>
+            <li><router-link to="/">Liste articles</router-link></li>
+            <li><router-link to="/about">À propos</router-link></li>
+            <li><router-link to="/presentation">Présentation</router-link></li>
+            <li><router-link to="/creation">Création</router-link></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <router-view></router-view>
+      </main>
+      <footer>
+        <div class="footer-text">
+          <p>Scientifiques diplômés en muscles</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Import Javascript -->
+    <script src="components/Navigation.js"></script>
+    <script src="components/listeArticles.js"></script>
+    <script src="components/articleView.js"></script>
+    <script src="components/About.js"></script>
+    <script src="components/Presentation.js"></script>
+    <script src="components/Creation.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

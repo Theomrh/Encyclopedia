@@ -1,5 +1,8 @@
 const listeArticles = {
   template: `<div>
+
+        <!-- Si showListe est différent que le booléen qu'il est actuellement -->
+        <!-- Alors il affiche le logo et la liste des articles -->
         <div v-if="!showListe" class="liste-article-position">
           <div class="articles-image">
               <div className="mascotte-position">
@@ -14,6 +17,9 @@ const listeArticles = {
               </ul>
           </div>
         </div>
+        
+        <!-- Sinon afficher un bouton pour retourner à la liste d'article -->
+        <!-- Affichage également des infos de l'article initialisé dans la data liste -->
         <div v-else>
             <p @click="updateShowListe(0)" class="back-button"><i class="uil uil-angle-left-b"></i>Retour à la liste d'article</p>
             <router-view :listedata="liste" :idActuel="idActuel"></router-view>
@@ -62,12 +68,17 @@ const listeArticles = {
     };
   },
   methods: {
+    /**
+     * Récupération de l'id et l'ajouter à une variable idActuel
+     * @param {id} id dans la data liste
+     */
     updateShowListe(id) {
       this.showListe = !this.showListe;
       this.idActuel = id;
     },
   },
   computed: {
+    // Permet de filtrer les articles à partir d'un input (barre de recherche)
     filteredPosts() {
       return this.liste.filter((article) => article.name.includes(this.search));
     },

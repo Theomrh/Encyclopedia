@@ -223,9 +223,6 @@ main .article-view {
 main .article-view a {
   color: #f23780;
 }
-main .form {
-  /* reset input */
-}
 main .form .form__group {
   position: relative;
   padding: 15px 0 0;

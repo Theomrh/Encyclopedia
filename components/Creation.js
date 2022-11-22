@@ -83,6 +83,7 @@ const Creation = {
     };
   },
   methods: {
+    // Récupération et création de l'image à partir de l'input file
     onFileChange(e) {
       var files = e.target.files || e.dataTransfer.files;
       if (!files.length) return;
@@ -98,6 +99,9 @@ const Creation = {
       };
       reader.readAsDataURL(file);
     },
+
+    // Back button
+    // Ajout des infos dans l'array article
     addArticle() {
       this.show = true;
       this.articles.push({
@@ -109,6 +113,7 @@ const Creation = {
         image: this.image,
       });
     },
+    // Back button
     retourFormulaire() {
       this.show = false;
     },

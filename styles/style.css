@@ -133,7 +133,7 @@ main .liste-article-position .articles-image {
 }
 main .liste-article-position .mascotte-position {
   position: relative;
-  left: -200px;
+  left: -100px;
 }
 main .liste-article-position .circle-mascotte {
   width: 540px;
@@ -149,9 +149,12 @@ main .liste-article-position .mascotte {
   transform: translate(-50%, -50%);
 }
 main .liste-article-position li {
+  position: relative;
+  left: 50px;
   list-style: none;
   font-size: 35px;
   padding: 40px 0;
+  width: 480px;
 }
 main .liste-article-position .liste-article {
   color: #fff;
@@ -162,7 +165,7 @@ main .liste-article-position .liste-article:hover {
 main .liste-article-position .search-bar {
   position: absolute;
   top: 30px;
-  left: 460px;
+  left: 590px;
   padding: 10px 0 10px 10px;
   width: 300px;
   border-radius: 6px;
@@ -176,16 +179,65 @@ main .article-view h1 {
   text-align: center;
   margin-top: 40px;
 }
-main .article-view .corps-article {
-  width: 45%;
+main .article-view .corps-article-infos {
+  width: 65%;
   text-align: left;
   margin: 0 auto;
 }
-main .article-view .auteur {
-  text-align: center;
+main .article-view .categorie {
+  font-size: 18px;
+  font-weight: bold;
+}
+main .article-view .corps-article {
+  color: #fff;
   margin-top: 20px;
-  margin-left: -530px;
+}
+main .article-view .auteur {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-style: italic;
+  font-weight: 400;
+}
+main .article-view .position-image-article {
+  text-align: center;
+}
+main .article-view .image-article {
+  height: 250px;
+  margin-top: 20px;
+}
+main .article-view .article-actuel {
+  position: absolute;
+  bottom: 105px;
+}
+main .article-view .source {
+  position: relative;
+  color: #f23780;
+}
+main .article-view .source::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #f23780;
+  transition: 0.3s ease-in-out;
+}
+main .article-view .source:hover::after {
+  width: 100%;
+}
+main .article-view .connexe {
+  float: right;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+main .article-view .connexe a {
+  color: #fff;
+}
+main .article-view .connexe a:hover {
+  color: #f23780;
+}
+main .article-view .connexe span {
   font-weight: bold;
 }
 main .about {
@@ -216,12 +268,6 @@ main .about .text-important::after {
   width: 100%;
   height: 2px;
   background: #f23780;
-}
-main .article-view {
-  color: #fff;
-}
-main .article-view a {
-  color: #f23780;
 }
 main .form .form__group {
   position: relative;
@@ -301,12 +347,18 @@ main select::-ms-expand {
   display: none;
 }
 main .select-position {
+  display: flex;
+  align-items: center;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 20px;
 }
+main .select-position p {
+  margin-right: 20px;
+}
 main .select-position .select {
+  margin-left: 20px;
   position: relative;
   display: flex;
   width: 15em;
@@ -373,6 +425,58 @@ main .btn-position button:hover {
 }
 main .back-button {
   cursor: pointer;
+  margin-left: 8px;
+}
+main h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+main .corps-article-infos {
+  width: 65%;
+  text-align: left;
+  margin: 0 auto;
+}
+main .categorie {
+  font-size: 18px;
+  font-weight: bold;
+}
+main .corps-article {
+  color: #fff;
+  margin-top: 20px;
+}
+main .auteur {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-weight: 400;
+}
+main .position-image-article {
+  text-align: center;
+}
+main .image-article {
+  height: 250px;
+  margin-top: 20px;
+}
+main .article-actuel {
+  position: absolute;
+  bottom: 105px;
+}
+main .source {
+  position: relative;
+  color: #f23780;
+}
+main .source::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #f23780;
+  transition: 0.3s ease-in-out;
+}
+main .source:hover::after {
+  width: 100%;
 }
 footer {
   width: 100%;

@@ -1,4 +1,5 @@
-// Router
+// Définir quelques routes
+// Chaque route doit correspondre à un composant.
 const routes = [
   {
     path: "/",
@@ -6,22 +7,8 @@ const routes = [
     // Liens enfants sur la page listeArticles
     children: [
       {
-        path: "/article1",
+        path: ":id",
         component: articleView,
-        // Récupération des données dans la data liste
-        props: (route) => ({ query: route.query.id }),
-      },
-      {
-        path: "/article2",
-        component: articleView,
-        // Récupération des données dans la data liste
-        props: (route) => ({ query: route.query.id }),
-      },
-      {
-        path: "/article3",
-        component: articleView,
-        // Récupération des données dans la data liste
-        props: (route) => ({ query: route.query.id }),
       },
     ],
   },
@@ -33,13 +20,19 @@ const routes = [
   },
 ];
 
+// Créer l'instance du routeur et passer l'option `routes`
 const router = VueRouter.createRouter({
+  // Fournir l'implémentation de l'historique à utiliser.
   history: VueRouter.createWebHashHistory(),
-  routes,
+  routes, // abréviation de "routes : routes".
 });
 
-// Création de l'app
+// Créer et monter l'instance racine.
 const app = Vue.createApp({});
 
+// Utilisation de l'instance du router pour rendre l'application
+// Compatible avec le router
 app.use(router);
+app.component("navigation", Navigation);
+
 app.mount("#app");

@@ -24,6 +24,7 @@ const Creation = {
     </div>
 
     <div className="select-position">
+      <p>Ajouter une image:</p>
       <div class="select">
         <select v-model="selected">
           <option v-for="option in options" v-bind:value="option.value">
@@ -47,21 +48,18 @@ const Creation = {
 
     <div v-else>
       <p @click="retourFormulaire()" class="back-button"><i class="uil uil-angle-left-b"></i>Retour au formulaire de création</p>
-      <ul>
-        <li v-for="article in articles" :key="article">
-          Nom: {{ article.name }}
-          <br />
-          Message: {{ article.message }}
-          <br />
-          Auteur: {{ article.auteur }}
-          <br />
-          Source: {{ article.source }}
-          <br />
-          Catégorie: {{ article.categorie }}
-          <br />
-          <img :src="image" />
-        </li>
-      </ul>
+        <div v-for="article in articles" :key="article">
+          <h1>{{ article.name }}</h1>
+          <div className="position-image-article">
+              <img :src="image" class="image-article" alt="Image d'article" />
+          </div>
+          <div className="corps-article-infos">
+              <p class="categorie">Catégorie: {{ article.categorie }}</p>
+              <p class="corps-article">{{ article.message }}</p>
+              <p class="auteur">Auteur: {{ article.auteur }}</p>
+              <a :href="article.source" class="source">Source pour cet article</a>
+          </div>
+        </div>
     </div>
   </div>`,
   data() {

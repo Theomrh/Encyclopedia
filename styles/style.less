@@ -21,7 +21,7 @@
 }
 
 // Function Each
-@sizes: range(10px, 60px, 10);
+@sizes: range(10px, 100px, 10);
 
 each(@sizes, {
   .padding-@{index} {
@@ -96,7 +96,7 @@ header {
 // Corps du projet
 main {
   width: 100%;
-  height: 82%;
+  height: 100vh;
   background: @violet;
   overflow: hidden;
 
@@ -104,6 +104,7 @@ main {
   .liste-article-position {
     // Utilisation d'une mixins
     .absolute-position-center();
+    margin-top: 50px;
 
     .articles-image {
       .flex-position();
@@ -200,7 +201,7 @@ main {
 
     .article-actuel {
       position: absolute;
-      bottom: 105px;
+      bottom: 60px;
     }
 
     .source {
@@ -246,7 +247,7 @@ main {
   .about {
     // Utilisation d'une mixins
     .absolute-position-center();
-    margin-top: 35px;
+    margin-top: 90px;
 
     .text-about {
       padding-bottom: 70px;
@@ -277,6 +278,8 @@ main {
 
   // Page Creation
   .form {
+    margin-top: 50px;
+
     .form__group {
       position: relative;
       padding: 15px 0 0;
@@ -522,6 +525,29 @@ main {
 
     &:hover::after {
       width: 100%;
+    }
+  }
+
+  // Page présentation
+  .presentation {
+    width: 80%;
+    font-size: @big-text - 5px;
+    line-height: 50px;
+    margin: 0 auto;
+
+    .theo {
+      color: @jaune;
+      font-weight: bolder;
+    }
+
+    .justine {
+      color: @rose;
+      font-weight: bolder;
+    }
+
+    .renan {
+      color: @jaune;
+      font-weight: bolder;
     }
   }
 }

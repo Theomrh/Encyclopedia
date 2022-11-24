@@ -62,6 +62,18 @@
 .padding-6 {
   padding-top: 60px;
 }
+.padding-7 {
+  padding-top: 70px;
+}
+.padding-8 {
+  padding-top: 80px;
+}
+.padding-9 {
+  padding-top: 90px;
+}
+.padding-10 {
+  padding-top: 100px;
+}
 *,
 *::before,
 *::after {
@@ -116,7 +128,7 @@ header a:hover {
 }
 main {
   width: 100%;
-  height: 82%;
+  height: 100vh;
   background: #492297;
   overflow: hidden;
 }
@@ -125,6 +137,7 @@ main .liste-article-position {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 50px;
 }
 main .liste-article-position .articles-image {
   display: flex;
@@ -207,7 +220,7 @@ main .article-view .image-article {
 }
 main .article-view .article-actuel {
   position: absolute;
-  bottom: 105px;
+  bottom: 60px;
 }
 main .article-view .source {
   position: relative;
@@ -245,7 +258,7 @@ main .about {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 35px;
+  margin-top: 90px;
 }
 main .about .text-about {
   padding-bottom: 70px;
@@ -268,6 +281,9 @@ main .about .text-important::after {
   width: 100%;
   height: 2px;
   background: #f23780;
+}
+main .form {
+  margin-top: 50px;
 }
 main .form .form__group {
   position: relative;
@@ -477,6 +493,24 @@ main .source::after {
 }
 main .source:hover::after {
   width: 100%;
+}
+main .presentation {
+  width: 80%;
+  font-size: 30px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+main .presentation .theo {
+  color: #e3c565;
+  font-weight: bolder;
+}
+main .presentation .justine {
+  color: #f23780;
+  font-weight: bolder;
+}
+main .presentation .renan {
+  color: #e3c565;
+  font-weight: bolder;
 }
 footer {
   width: 100%;

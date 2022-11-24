@@ -74,6 +74,36 @@
 .padding-10 {
   padding-top: 100px;
 }
+.padding-11 {
+  padding-top: 110px;
+}
+.padding-12 {
+  padding-top: 120px;
+}
+.padding-13 {
+  padding-top: 130px;
+}
+.padding-14 {
+  padding-top: 140px;
+}
+.padding-15 {
+  padding-top: 150px;
+}
+.padding-16 {
+  padding-top: 160px;
+}
+.padding-17 {
+  padding-top: 170px;
+}
+.padding-18 {
+  padding-top: 180px;
+}
+.padding-19 {
+  padding-top: 190px;
+}
+.padding-20 {
+  padding-top: 200px;
+}
 *,
 *::before,
 *::after {
@@ -84,7 +114,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Comfortaa", cursive;
-  color: white;
+  color: #fff;
 }
 #app {
   width: 100%;
@@ -258,7 +288,7 @@ main .about {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 90px;
+  margin-top: 60px;
 }
 main .about .text-about {
   padding-bottom: 70px;

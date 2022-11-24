@@ -2,7 +2,7 @@
 @import "variables.less";
 @import "mixins.less";
 
-// Import du font sur google font
+// Import font avec google font
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
 // Map
@@ -21,13 +21,16 @@
 }
 
 // Function Each
-@sizes: range(10px, 100px, 10);
+@sizes: range(10px, 200px, 10);
 
 each(@sizes, {
   .padding-@{index} {
     padding-top: @value;
   }
 });
+
+// Function if
+@color-light: boolean(luma(@rose) > 50%);
 
 *,
 *::before,
@@ -40,7 +43,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Comfortaa", cursive;
-  color: if(@color-light, black, white);
+  color: if(@color-light, @violet, @white);
 }
 
 #app {
@@ -247,7 +250,7 @@ main {
   .about {
     // Utilisation d'une mixins
     .absolute-position-center();
-    margin-top: 90px;
+    margin-top: 60px;
 
     .text-about {
       padding-bottom: 70px;

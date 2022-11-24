@@ -76,7 +76,7 @@ const listeArticles = {
   methods: {
     /**
      * Récupération de l'id et l'ajouter à une variable idActuel
-     * @param {id} id dans la data liste
+     * @param {id} id dans la data liste, dans le code html de vue (article.id)
      */
     updateShowListe(id) {
       this.showListe = !this.showListe;

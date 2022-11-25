@@ -31,7 +31,7 @@ const Creation = {
       </div>
 
       <div className="select-position">
-        <p>Ajouter une image:</p>
+        <p>Ajouter une option:</p>
         <div class="select">
           <select v-model="selected">
             <option v-for="option in options" v-bind:value="option.value">
